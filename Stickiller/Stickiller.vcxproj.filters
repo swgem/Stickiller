@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Arquivos de Recurso">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{64412732-d6c9-4597-be95-34c275ec1c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{3b587040-fac4-4245-83e0-cbb2d1332cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\Display">
+      <UniqueIdentifier>{a27c0a41-62c3-463a-b8ed-9bff3a9844de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\Game">
+      <UniqueIdentifier>{9e4612db-1d79-46f6-b463-44ab12cfbbb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\Sound">
+      <UniqueIdentifier>{588ccf62-c191-4ef6-9895-92d2ca95a641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Display">
+      <UniqueIdentifier>{308817ec-48f6-428b-bd76-ae78a65749f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game">
+      <UniqueIdentifier>{742cfcfe-70a8-42ca-bacd-479e487b46f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sound">
+      <UniqueIdentifier>{1e3c4794-913b-4f58-b387-b5ee33526dcb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Principal.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Display\DisplayTask.cpp">
+      <Filter>src\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Task.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Display\DisplayManager.cpp" />
+    <ClCompile Include="src\Game\GameTask.cpp">
+      <Filter>src\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\Principal.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Display\DisplayTask.hpp">
+      <Filter>inc\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Task.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Display\DisplayManager.hpp" />
+    <ClInclude Include="inc\Game\GameTask.hpp">
+      <Filter>inc\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
