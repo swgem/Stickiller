@@ -41,9 +41,11 @@
     <ClCompile Include="Task.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Display\DisplayManager.cpp" />
     <ClCompile Include="src\Game\GameTask.cpp">
       <Filter>src\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Display\DisplayManager.cpp">
+      <Filter>src\Display</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +58,11 @@
     <ClInclude Include="inc\Task.hpp">
       <Filter>inc</Filter>
     </ClInclude>
-    <ClInclude Include="inc\Display\DisplayManager.hpp" />
     <ClInclude Include="inc\Game\GameTask.hpp">
       <Filter>inc\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Display\DisplayManager.hpp">
+      <Filter>inc\Display</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
