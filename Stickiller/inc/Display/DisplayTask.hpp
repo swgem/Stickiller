@@ -11,7 +11,7 @@ namespace Display {
 	private:
 		const int SCREEN_HEIGHT{ 480 };
 		const int SCREEN_WIDTH{ 640 };
-		const double FPS{ 60 };
+		const double FPS{ 60.0 };
 
 		DisplayManager *m_dm;
 		ALLEGRO_DISPLAY *m_display;

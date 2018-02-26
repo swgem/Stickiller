@@ -1,8 +1,13 @@
 #include "..\..\inc\Game\GameTask.hpp"
 
+#include "..\..\inc\Game\MenuManager.hpp"
+
 void Game::GameTask::run()
 {
 	initInput();
+
+	int debounceCount{ 0 };
+	MenuManager mm;
 
 	while (true)
 	{
@@ -11,22 +16,32 @@ void Game::GameTask::run()
 		
 		if (ev.type == ALLEGRO_EVENT_TIMER)
 		{
+			if (m_lastKey != InputKey::NONE)
+			{
+				debounceCount++;
+				if ((debounceCount * UPDATE_PERIOD) > DEBOUNCE_PERIOD)
+				{
+					debounceCount = 0.0;
+				}
+			}
+
 			switch (m_gm->getGameMode())
 			{
 				case GameMode::MENU:
-					
+					mm.manage(m_lastKey);
 					break;
 				default:
 					break;
 			}
 		}
-		else if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+		else if (ev.type == ALLEGRO_EVENT_KEY_DOWN && debounceCount == 0.0)
 		{
 			m_lastKey = verifyKey(ev.keyboard.keycode);
 		}
 		else if (ev.type == ALLEGRO_EVENT_KEY_UP)
 		{
 			m_lastKey = InputKey::NONE;
+			debounceCount = 0.0;
 		}
 	}
 }
@@ -40,6 +55,8 @@ void Game::GameTask::initInput()
 
 	al_register_event_source(m_eventQueue, al_get_timer_event_source(m_timer));
 	al_register_event_source(m_eventQueue, al_get_keyboard_event_source());
+
+	al_start_timer(m_timer);
 }
 
 Game::InputKey Game::GameTask::verifyKey(int input)
@@ -58,6 +75,10 @@ Game::InputKey Game::GameTask::verifyKey(int input)
 			break;
 		case ALLEGRO_KEY_RIGHT:
 			key = InputKey::KEY_RIGHT;
+			break;
+		case ALLEGRO_KEY_PAD_ENTER:
+		case ALLEGRO_KEY_ENTER:
+			key = InputKey::KEY_ENTER;
 			break;
 		default:
 			key = InputKey::NONE;

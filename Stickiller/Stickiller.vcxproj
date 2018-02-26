@@ -116,13 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MenuManager.cpp" />
     <ClCompile Include="src\Display\DisplayManager.cpp" />
     <ClCompile Include="src\Display\DisplayTask.cpp" />
     <ClCompile Include="src\Game\GameManager.cpp" />
     <ClCompile Include="src\Game\GameTask.cpp" />
+    <ClCompile Include="src\Game\MenuManager.cpp" />
     <ClCompile Include="src\Principal.cpp" />
-    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="src\Task.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Display\DisplayManager.hpp" />

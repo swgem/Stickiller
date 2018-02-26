@@ -6,19 +6,12 @@
 
 namespace Game
 {
-	enum class InputKey
-	{
-		NONE,
-		KEY_DOWN,
-		KEY_UP,
-		KEY_LEFT,
-		KEY_RIGHT
-	};
-
 	class GameTask : public Task
 	{
 	private:
-		const double UPDATE_FREQUENCY = 20;
+		const double UPDATE_FREQUENCY{ 20.0 };
+		const double UPDATE_PERIOD{ 1000.0 * 1.0 / UPDATE_FREQUENCY };
+		const double DEBOUNCE_PERIOD{ 150.0 };
 
 		Display::DisplayManager *m_dm;
 		GameManager *m_gm;
