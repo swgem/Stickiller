@@ -19,11 +19,13 @@ int Principal::execute()
 	else
 	{
 		// Tenta inicializar rotina de Display
-		errorCode = m_dm.startDisplay();
+		m_dt.setDisplayManager(m_dm);
+		errorCode = m_dt.start();
 		
 		if (errorCode != -1)
 		{
 			// Tenta inicializar rotina principal de jogo
+			m_gt.setGameManager(m_gm);
 			m_gt.setDisplayManager(m_dm);
 			errorCode = m_gt.start();
 		}

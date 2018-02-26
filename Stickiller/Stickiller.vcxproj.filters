@@ -47,6 +47,12 @@
     <ClCompile Include="src\Display\DisplayManager.cpp">
       <Filter>src\Display</Filter>
     </ClCompile>
+    <ClCompile Include="MenuManager.cpp">
+      <Filter>src\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameManager.cpp">
+      <Filter>src\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Principal.hpp">
@@ -63,6 +69,12 @@
     </ClInclude>
     <ClInclude Include="inc\Display\DisplayManager.hpp">
       <Filter>inc\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Game\MenuManager.hpp">
+      <Filter>inc\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Game\GameManager.hpp">
+      <Filter>inc\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

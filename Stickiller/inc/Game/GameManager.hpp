@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Display
+namespace Game
 {
 	enum class GameMode
 	{
@@ -11,13 +11,16 @@ namespace Display
 		PHASE1
 	};
 
-	class DisplayManager
+	class GameManager
 	{
 	private:
 		GameMode m_mode;
 
 	public:
-		DisplayManager();
+		GameManager();
+		~GameManager();
+
 		void setGameMode(GameMode mode);
+		GameMode getGameMode();
 	};
 }

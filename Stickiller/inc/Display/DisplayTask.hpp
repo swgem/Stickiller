@@ -3,6 +3,7 @@
 #include <allegro5\allegro.h>
 
 #include "..\Task.hpp"
+#include "..\Display\DisplayManager.hpp"
 
 namespace Display {
 	class DisplayTask : public Task
@@ -12,6 +13,7 @@ namespace Display {
 		const int SCREEN_WIDTH{ 640 };
 		const double FPS{ 60 };
 
+		DisplayManager *m_dm;
 		ALLEGRO_DISPLAY *m_display;
 		ALLEGRO_EVENT_QUEUE *m_refresherEvent;
 		ALLEGRO_TIMER *m_refresherTimer;
@@ -24,5 +26,7 @@ namespace Display {
 	public:
 		DisplayTask();
 		~DisplayTask();
+
+		void setDisplayManager(DisplayManager &dm);
 	};
 }

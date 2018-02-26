@@ -14,7 +14,7 @@ void Display::DisplayTask::run()
 
 		if (ev.type == ALLEGRO_EVENT_TIMER)
 		{
-			counter += 50;
+			counter += 1;
 			if (counter > 255)
 			{
 				counter = 0;
@@ -61,4 +61,9 @@ Display::DisplayTask::~DisplayTask()
 	al_destroy_display(m_display);
 	al_destroy_event_queue(m_refresherEvent);
 	al_destroy_timer(m_refresherTimer);
+}
+
+void Display::DisplayTask::setDisplayManager(DisplayManager &dm)
+{
+	m_dm = &dm;
 }

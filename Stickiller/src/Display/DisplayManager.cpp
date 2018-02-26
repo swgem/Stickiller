@@ -5,7 +5,7 @@ Display::DisplayManager::DisplayManager()
 	
 }
 
-int Display::DisplayManager::startDisplay()
+void Display::DisplayManager::setGameMode(GameMode mode)
 {
-	return m_dt.start();
+	m_mode = mode;
 }

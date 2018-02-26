@@ -116,8 +116,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuManager.cpp" />
     <ClCompile Include="src\Display\DisplayManager.cpp" />
     <ClCompile Include="src\Display\DisplayTask.cpp" />
+    <ClCompile Include="src\Game\GameManager.cpp" />
     <ClCompile Include="src\Game\GameTask.cpp" />
     <ClCompile Include="src\Principal.cpp" />
     <ClCompile Include="Task.cpp" />
@@ -125,7 +127,9 @@
   <ItemGroup>
     <ClInclude Include="inc\Display\DisplayManager.hpp" />
     <ClInclude Include="inc\Display\DisplayTask.hpp" />
+    <ClInclude Include="inc\Game\GameManager.hpp" />
     <ClInclude Include="inc\Game\GameTask.hpp" />
+    <ClInclude Include="inc\Game\MenuManager.hpp" />
     <ClInclude Include="inc\Principal.hpp" />
     <ClInclude Include="inc\Task.hpp" />
   </ItemGroup>
